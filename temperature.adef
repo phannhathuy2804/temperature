@@ -1,0 +1,26 @@
+executables:
+{
+	temperature = ( temperatureComponent )
+}
+
+processes:
+{
+	envVars:
+	{
+		LE_LOG_LEVEL = DEBUG
+	}
+
+	run:
+	{
+		( temperature )
+	}
+
+	maxCoreDumpFileBytes: 512K
+	maxFileBytes: 512K
+}
+bindings:
+{
+	temperature.temperatureComponent.le_spi -> spiService.le_spi
+}
+version: 1.0.0
+maxFileSystemBytes: 512K

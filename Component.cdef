@@ -1,0 +1,11 @@
+requires:
+{
+	api:
+	{
+		le_spi.api
+	}
+}
+sources:
+{
+	temperatureComponent.c
+}
